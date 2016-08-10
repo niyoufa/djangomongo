@@ -2,7 +2,7 @@
 搭建django nonrel 环境
 
 0. 新建一个虚拟环境
-参考文档：
+参考文档：http://liuzhijun.iteye.com/blog/1872241?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io
 
 1. pip install git+https://github.com/django-nonrel/django@nonrel-1.5
 
