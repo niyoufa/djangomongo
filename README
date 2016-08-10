@@ -1,0 +1,14 @@
+
+搭建django nonrel 环境
+
+0. 新建一个虚拟环境
+参考文档：
+
+1. pip install git+https://github.com/django-nonrel/django@nonrel-1.5
+
+2. pip install git+https://github.com/django-nonrel/djangotoolbox
+
+3. pip install git+https://github.com/django-nonrel/mongodb-engine to install mongodb support for django.
+
+4. sudo apt-get install libmysqlclient-dev
+   pip install MySQL-python
