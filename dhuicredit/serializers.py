@@ -9,7 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
     id = serializers.SerializerMethodField()
     create_date = serializers.SerializerMethodField()
     login_date = serializers.SerializerMethodField()
-    t_write_date = serializers.SerializerMethodField()
+    write_date = serializers.SerializerMethodField()
     type = serializers.SerializerMethodField()
     user_auth_type = serializers.SerializerMethodField()
 
@@ -28,7 +28,7 @@ class UserSerializer(serializers.ModelSerializer):
         else:
             return str(instance.login_date)
 
-    def get_t_write_date(self, instance):
+    def get_write_date(self, instance):
         if instance.write_date == "":
             return ""
         else:
@@ -39,27 +39,6 @@ class UserSerializer(serializers.ModelSerializer):
 
     def get_user_auth_type(self,instance):
         return instance.user_auth_type
-
-    class Meta:
-        model = User
-        fields = ("id","mobile","email","type","province","city","create_date","invitation_mobile",
-                  "login_date","address",
-                  "sex","privilege","active","t_write_date",
-                  "headimageurl","password","nickname",
-                  "user_auth_type","type")
-
-class UserCreateSerializer(serializers.ModelSerializer):
-    id = serializers.SerializerMethodField()
-    write_date = serializers.SerializerMethodField()
-
-    def get_id(self, instance):
-        return str(instance.id)
-
-    def get_write_date(self, instance):
-        if instance.write_date == "":
-            return ""
-        else:
-            return str(instance.write_date)
 
     class Meta:
         model = User
