@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -65,6 +66,10 @@ DATABASES = {
     'demosite': {
         'ENGINE': 'django_mongodb_engine',
         'NAME': 'my_database',
+    },
+    'dhuicredit': {
+        'ENGINE': 'django_mongodb_engine',
+        'NAME': 'dhuicredit',
     },
 }
 
