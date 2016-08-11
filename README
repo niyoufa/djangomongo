@@ -12,3 +12,9 @@
 
 4. sudo apt-get install libmysqlclient-dev
    pip install MySQL-python
+
+5. pip install djangorestframework==3.1.1
+
+6. pip install markdown
+
+7. pip install django-filter
